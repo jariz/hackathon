@@ -13,3 +13,9 @@ app/config/database.php
 #intelli shizzle
 *.iml
 .idea/
+
+#laravel shizzle
+_ide_helper.php
+_ide_helper_models.php
+public/packages/
+vendor/
