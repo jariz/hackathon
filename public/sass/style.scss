@@ -6,17 +6,20 @@
 // General
 @import "base";
 @import "normalize";
+@import "variables";
 @import "typography";
+@import "layout";
 
 // Mixins
-@import "mixins/mediaqueries";
-@import "mixins/sprite";
+@import "mixins/animate";
 
 // UI Elements
 @import "ui-elements/buttons";
 @import "ui-elements/menu";
 @import "ui-elements/forms";
+@import "ui-elements/tiles";
 
 // Sections
 @import "sections/header";
 @import "sections/footer";
+@import "sections/sections";
