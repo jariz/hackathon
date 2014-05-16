@@ -9,7 +9,24 @@
 class TypesSeeder extends Seeder{
 
     public function run(){
-        // Populate types table
+
+        $types = [
+           [
+               'name' => 'test',
+               'display_name' => 'test Display name'
+           ]
+        ];
+
+        foreach($types as $type){
+            $TypeObject = new Type;
+
+            foreach($type as $key => $value){
+                $TypeObject->$key = $value;
+            }
+
+            $TypeObject->save();
+        }
+
     }
 
 } 
