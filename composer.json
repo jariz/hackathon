@@ -6,7 +6,7 @@
     "require-dev": {
         "way/generators": "2.*",
         "barryvdh/laravel-ide-helper": "1.*",
-        "jyggen/docs": "*"
+        "jyggen/curl": "*"
     },
 	"autoload": {
 		"classmap": [
