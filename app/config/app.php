@@ -123,7 +123,6 @@ return array(
         //dev
         'Way\Generators\GeneratorsServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-        'Barryvdh\Debugbar\ServiceProvider',
 	),
 
 	/*
