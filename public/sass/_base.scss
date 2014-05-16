@@ -14,7 +14,16 @@
 /* normalize setup
    ========================================================================== */
 $font-size: 14px;
-$font-family: helvetica;
+$font-family: 'Open Sans', sans-serif;
+$font-title: 'Quicksand', sans-serif;
+
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+
+
+
 // The base font size.
 $base-font-size: $font-size !default; // Overrides default set in Vertical Rhythm partial.
 

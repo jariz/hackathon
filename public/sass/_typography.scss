@@ -1,5 +1,27 @@
 /* fonts
    ========================================================================== */
+   @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+   @import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700);
 
 /* headings
    ========================================================================== */
+
+   h1 {
+   	font: $h1-font-size $font-title;
+   	color: $white;
+   	text-transform: uppercase;
+   }
+
+   h2 {
+   	font: $h2-font-size $font-title;
+   	color: $white;
+   	text-transform: uppercase;
+   }
+
+   p {
+   	width: 100%;
+   	font: $font-size $font-family;
+   	font-weight: $light;
+   	color: $white;
+   	margin: 0 auto;
+   }

@@ -1,2 +1,28 @@
 /* header
    ========================================================================== */
+
+   header {
+   	width: 100%;
+   	height: 100%;
+   	background: url(../images/background.jpg) center top no-repeat;
+   	background-size: cover;
+   	text-transform: uppercase;
+   	text-align: center;
+   	display: table;
+   	
+   	.container {
+   		display: table-cell;
+   		vertical-align: middle;
+   		position: relative;
+
+   			h1 {
+   				font-size: 300%;
+   			}
+
+   			h2 {
+   				color: $red;
+   			}
+
+   		}
+
+   	}

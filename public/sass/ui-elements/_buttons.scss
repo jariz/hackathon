@@ -1,3 +1,24 @@
 /* ==========================================================================
 	 buttons
 	 ========================================================================== */
+
+	.button {
+		min-width:120px;
+		background-color: transparent;
+		border:1px solid $red;
+		color: $white;
+		padding: 15px 20px;
+		margin: 10px auto;
+		text-decoration: none;
+		text-align:center;
+		position:relative;
+		@include border-radius(3px);
+		@include box-shadow(none);
+		@include inline-block();
+		@include transition(all 0.25s);
+
+		&:hover,active {
+			background: $red;
+			@include transition(all 0.25s);
+		}
+}

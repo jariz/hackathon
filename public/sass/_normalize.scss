@@ -82,7 +82,8 @@ button,
 input,
 select,
 textarea {
-    font-family: $base-font-family;
+    font-family: $font-family;
+    height: 100%;
 }
 
 /*
@@ -91,6 +92,7 @@ textarea {
 
 body {
     margin: 0;
+    height: 100%;
 }
 
 
