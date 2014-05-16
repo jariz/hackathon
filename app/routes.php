@@ -1,3 +1,6 @@
 <?php
 
-Route::get("/", "Home@show");
+Route::get("/", ['as' => 'home', 'uses' =>  "HomeController@show"]);
+Route::get('questions', ['as' => 'questions', 'uses' => 'QuestionsController@show']);
+Route::get('house/{id?}', ['as' => 'house', 'uses' => 'HouseController@show']);
+Route::get('contact', ['as' => 'contact', 'uses' => 'ContactController@show']);
