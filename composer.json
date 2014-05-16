@@ -5,7 +5,8 @@
 	},
     "require-dev": {
         "way/generators": "2.*",
-        "barryvdh/laravel-ide-helper": "1.*"
+        "barryvdh/laravel-ide-helper": "1.*",
+        "jyggen/docs": "*"
     },
 	"autoload": {
 		"classmap": [
