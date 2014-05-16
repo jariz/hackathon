@@ -16,12 +16,13 @@ class CreateHousesTable extends Migration {
             $table->increments('id');
             $table->string('adres');
             $table->string('postal_code');
-            $table->integer('year');
-            $table->integer('living_area');
-            $table->integer('plot_area');
+            $table->string('photo');
+            $table->string('price_sort');
+            $table->string('house_id');
             $table->integer('price');
             $table->string('lat');
             $table->string('lng');
+            $table->string('url');
         });
 	}
 

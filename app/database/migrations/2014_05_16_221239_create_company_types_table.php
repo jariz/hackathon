@@ -26,7 +26,7 @@ class CreateCompanyTypesTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('company_drops');
 	}
 
 }
