@@ -6,7 +6,7 @@
  * Time: 1:29 AM
  */
 
-class QuestionsController {
+class QuestionsController extends BaseController {
 
     public function show(){
         return View::make("questions");
