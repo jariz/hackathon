@@ -25,6 +25,7 @@
             // call Isotope as a callback
             function( newElements ) {
                 $(newElements).click(setModalCorrect);
+                window.runModalTriggers();
                 container.isotope( 'appended', $( newElements ) );
                 $("img.lazy").lazyload();
             }

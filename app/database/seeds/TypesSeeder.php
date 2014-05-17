@@ -30,7 +30,7 @@ class TypesSeeder extends Seeder{
             ],
             [
                 'name' => 'car_wash',
-                'display_name' => 'Car was'
+                'display_name' => 'Car wash'
             ],
             [
                 'name' => 'gas_station',
@@ -42,7 +42,7 @@ class TypesSeeder extends Seeder{
            ],
             [
                 'name' => 'night_club',
-                'display_name' => 'Night club'
+                'display_name' => 'Nightclub'
             ],
             [
                 'name' => 'bar',
