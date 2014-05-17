@@ -47,6 +47,7 @@
 					</ul>
 				</div>
 			</article>
+
 		</div>
 	</section>
 @stop
