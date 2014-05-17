@@ -87,7 +87,8 @@
         },
         nextQuestion: function(callback) {
             var alreadyCalled = false;
-            $(".question>h3,.question>h1,.question .answers").fadeOut(500, function() {
+            $(".question>h3,.question>h1").show().fadeOut("slow");
+            $(".question .answers").show().fadeOut("slow", function() {
                 if(alreadyCalled) return;
                 else alreadyCalled = true;
 
