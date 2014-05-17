@@ -55,9 +55,9 @@
                 return false;
 
             if(yes && typeof question.answers.yes == "object") {
-                Questions.exclude = $.extend(Questions.exclude, question.answers.yes);
+                Questions.exclude = $.extend(question.answers.yes, Questions.exclude);
             } else if(!yes && typeof question.answers.no == "object") {
-                Questions.exclude = $.extend(Questions.exclude, question.answers.no);
+                Questions.exclude = $.extend(question.answers.no, Questions.exclude);
             }
 
             if(Questions.exclude.length == 0) return;
@@ -87,7 +87,8 @@
         },
         nextQuestion: function(callback) {
             var alreadyCalled = false;
-            $(".question>h3,.question>h1,.question .answers").fadeOut(500, function() {
+            $(".question>h3,.question>h1").show().fadeOut("slow");
+            $(".question .answers").show().fadeOut("slow", function() {
                 if(alreadyCalled) return;
                 else alreadyCalled = true;
 

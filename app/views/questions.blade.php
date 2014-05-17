@@ -19,14 +19,14 @@
 				<img data-original="{{$house->photo}}" class="lazy origin-image">
 				<div class="overlay">
                     <p class="hide origin-postal_code">{{$house->postal_code}}</p>
-                    <p class="hide original-price">&euro; {{$house->money_format}}</p>
+                    <p class="hide original-price">{{$house->money_format}}</p>
                     <p class="hide origin-url">{{$house->url}}</p>
 					<ul class="tileinfo">
 						<li class="origin-adres"><i class="fa fa-home"></i> {{$house->adres}}</li>
                         @if(!empty($meta[$house->id]["tags"]))
 						<li class="origin-tags"><i class="fa fa-tags"></i> {{$meta[$house->id]["tags"]}}</li>
                         @endif
-						<li class="origin-price"><i class="fa fa-dollar"></i> {{number_format($house->price)}}</li>
+						<li class="origin-price"><i class="fa fa-euro"></i> {{number_format($house->price)}}</li>
 					</ul>
 				</div>
 			</article>
@@ -43,7 +43,7 @@
     				<div>
     				    <img class="house-image" src="#" />
                         <p><i class="fa fa-home"></i> <span class="postal_code"></span></p>
-    					<p><i class="fa fa-dollar"></i> <span class="price">Wordt replaced met prijs</span></p>
+    					<p><i class="fa fa-euro"></i> <span class="price">Wordt replaced met prijs</span></p>
     					<p><i class="fa fa-tags"></i> <span class="tags"></span></p>
     					<p>
     					<!--<ul>

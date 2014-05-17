@@ -14,8 +14,12 @@
 }
 
 .hide{
-  display: none;
+  display: none !important;
 }
 #infscr-loading {
   display:none!important;
+}
+
+.md-trigger{
+  cursor: pointer;
 }
