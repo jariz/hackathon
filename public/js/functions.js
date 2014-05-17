@@ -1,4 +1,8 @@
 
+  $(window).bind("load", function () {
+        $('#loader').fadeOut(100);
+    });
+
 var wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
@@ -13,5 +17,5 @@ var container = document.querySelector('.container');
 var msnry = new Masonry( container, {
   // options...
   itemSelector: 'article',
-  columnWidth: 300
+  columnWidth: 300,
 });
