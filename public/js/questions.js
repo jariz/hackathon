@@ -110,7 +110,9 @@
             "Awesome",
             "Alright then.",
             "Alright!",
-            "OK"
+            "OK",
+            "Sweet.",
+            "Excellent"
         ]
     };
 
