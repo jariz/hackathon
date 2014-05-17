@@ -11,7 +11,7 @@ class QuestionsController extends BaseController
 
     private $question = [
         [
-            'phrase' => 'Do you like books?',
+            'phrase' => 'Do you like reading?',
             'answers' => [
                 'no' => [
                     'book_store',
@@ -35,68 +35,87 @@ class QuestionsController extends BaseController
         ],
         [
             'phrase' => 'Do you like to party?',
-            'no' => [
-                'night_club',
-                'bar'
+            'answers' => [
+                'no' => [
+                    'night_club',
+                    'bar'
+                ]
             ]
 
         ],
         [
-            'phrase' => 'Do you like coffee?',
-            'no' => [
-                'cafe'
+            'phrase' => 'Do you like drinking coffee?',
+            'answers' => [
+                'no' => [
+                    'cafe'
+                ]
             ]
         ],
         [
-            'phrase' => 'Do you like shopping?',
-            'no' => [
-                'shopping_mall',
-                'store',
-                'shoe_store'
+            'phrase' => 'Do you like to go shopping?',
+            'answers' => [
+                'no' => [
+                    'shopping_mall',
+                    'store',
+                    'shoe_store'
+                ]
             ]
         ],
         [
-            'phrase' => 'Do you have health problems?',
-            'no' => [
-                'dentist',
-                'hospital',
-                'doctor'
+            'phrase' => 'Are you having health problems?',
+            'answers' => [
+                'no' => [
+                    'dentist',
+                    'hospital',
+                    'doctor'
+                ]
             ]
         ],
         [
             'phrase' => 'Do you like animals?',
-            'no' => [
-                'pet_store',
-                'zoo'
+            'answers' => [
+                'no' => [
+                    'pet_store',
+                    'zoo'
+                ]
             ]
 
         ],
 
         [
-            'phrase' => 'Do you have a pet?',
-            'no' => [
-                'veterinary_care'
+            'phrase' => 'Do you own a pet?',
+            'answers' => [
+                'no' => [
+                    'veterinary_care'
+                ]
             ]
         ],
         [
             'phrase' => 'Do you like to cook?',
-            'no' => [
-                'meal_delivery',
-                'meal_takeaway'
+            'answers' => [
+                'no' => [
+                    'meal_delivery',
+                    'meal_takeaway'
+                ]
             ]
+
         ],
         [
-            'phrase' => 'Do you use the public transport often?.',
-            'no' => [
-                'taxi_stand',
-                'train_station',
-                'bus_station'
+            'phrase' => 'Do you use the public transport often?',
+            'answers' => [
+                'no' => [
+                    'taxi_stand',
+                    'train_station',
+                    'bus_station'
+                ]
             ]
         ],
         [
             'phrase' => 'Are you planning to study',
-            'no' => [
-                'university'
+            'answers' => [
+                'no' => [
+                    'university'
+                ]
             ]
         ]
 
