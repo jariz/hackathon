@@ -121,9 +121,27 @@ class QuestionsController extends BaseController
 
     ];
 
+    public function countExcluded($params) {
+        $params = explode(",", $params);
+        $types = Type::all();
+        foreach($params as $param) {
+            $found = false;
+            foreach($types as $type) {
+                if($type->name == $param) $found = true;
+            }
+            if(!$found) App::abort(403);
+        }
+
+        $builder = new House();
+        foreach($params as $param) {
+            $builder = $builder->where($param, "=", 0);
+        }
+        return ["count" => number_format($builder->count())];
+    }
+
     public function show()
     {
-        $houses = $this->getResults();
+        $houses = House::paginate(12);
 
         $types = Type::all();
         $metas = [];
@@ -145,21 +163,8 @@ class QuestionsController extends BaseController
         return View::make("questions")
             ->with('houses', $houses)
             ->with("meta", $metas)
-            ->with("questions", $this->question);
-    }
-
-    public function getResults()
-    {
-        $filterTypes = Session::get('filter');
-
-        $houses = House::paginate(12);
-
-        return $houses;
-    }
-
-    public function resetFilter()
-    {
-        Session::forget('filter');
+            ->with("questions", $this->question)
+            ->with("total", number_format(House::count()));
     }
 
 } 

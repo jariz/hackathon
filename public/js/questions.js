@@ -63,16 +63,24 @@
             if(Questions.exclude.length == 0) return;
 
             var klass = "";
+            var query = "";
             for(key in Questions.exclude){
                 var current = Questions.exclude[key];
                 klass += ",."+current;
+                query += ","+current;
             }
-            if(klass.length > 0) klass = klass.substr(1, klass.length);;
+            if(klass.length > 0) klass = klass.substr(1, klass.length);
+            if(query.length > 0) query = query.substr(1, query.length);
 
             console.log("Je haat deze dingen:", Questions.exclude);
 
             $(".container").isotope({
                 filter: ":not("+klass+")"
+            });
+
+            console.log("Ik ga de server nu een vraagje stellen");
+            $.getJSON("/count/excluded/"+query, {}, function(data) {
+                $("#current").text(data.count);
             });
 
             Questions.newQuestion();

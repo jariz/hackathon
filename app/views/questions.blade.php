@@ -9,7 +9,7 @@
 				<a href="#" class="button no">No</a>
 			</div>
 
-			<h3 class="wow fadeInUp" data-wow-delay="1s">3/2500 suitable houses found</h3>
+			<h3 class="wow fadeInUp" data-wow-delay="1s"><span id="current">{{$total}}</span>/<span id="total">{{$total}}</span> suitable houses found</h3>
 		</div>
 
 	<section>
