@@ -44,6 +44,27 @@
 <!-- disable logging -->
 <script type="text/javascript">
 //    if(!window.console) window.console = {}; var methods = ["log", "debug", "warn", "info"]; for(var i=0;i<methods.length;i++){ console[methods[i]] = function(){};}
+var setModalCorrect = function(){
+    var modal =  $('.md-content');
+
+    var adres = $(this).find('.origin-adres').text();
+    modal.find('.adres').text(adres);
+
+    var image = $(this).find('.origin-image').attr('src');
+    modal.find('.house-image').attr('src', image);
+
+    var postal_code = $(this).find('.origin-postal_code').text();
+    modal.find('.postal_code').text(postal_code);
+
+    var price = $(this).find('.original-price').text();
+    modal.find('.price').text(price);
+
+    var url = $(this).find('.origin-url').text();
+    modal.find('.url').attr('href', url);
+
+    var tags = $(this).find('.origin-tags').text();
+    modal.find('.tags').text(tags);
+}
 </script>
 
 <!-- Requirejs -->

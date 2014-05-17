@@ -68,27 +68,9 @@
     <script>
         var questions = {{json_encode($questions)}};
         $(function(){
-            $(document).on('click', '.md-trigger', function(){
-                var modal =  $('.md-content');
+        
 
-                var adres = $(this).find('.origin-adres').text();
-                modal.find('.adres').text(adres);
-
-                var image = $(this).find('.origin-image').attr('src');
-                modal.find('.house-image').attr('src', image);
-
-                var postal_code = $(this).find('.origin-postal_code').text();
-                modal.find('.postal_code').text(postal_code);
-
-                var price = $(this).find('.original-price').text();
-                modal.find('.price').text(price);
-
-                var url = $(this).find('.origin-url').text();
-                modal.find('.url').attr('href', url);
-
-                var tags = $(this).find('.origin-tags').text();
-                modal.find('.tags').text(tags);
-            });
+            $(document).on('click', '.item', setModalCorrect);
         });
     </script>
     <script src="{{URL::asset('js/questions.js')}}"></script>

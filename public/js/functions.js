@@ -1,5 +1,7 @@
 (function($){
+
     $(document).ready(function () {
+
 
         var container = $('.container');
 
@@ -22,6 +24,7 @@
             },
             // call Isotope as a callback
             function( newElements ) {
+                $(newElements).click(setModalCorrect);
                 container.isotope( 'appended', $( newElements ) );
                 $("img.lazy").lazyload();
             }
