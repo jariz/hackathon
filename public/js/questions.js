@@ -3,6 +3,11 @@
         theQuestions: undefined,
         init: function () {
             this.theQuestions = questions;
+
+            //set title
+            var question = Questions.getQuestion();
+            $(".question>h1").text(question.phrase);
+
             //bind answers
             $(".question .answers .yes").click(this.yes);
             $(".question .answers .no").click(this.no);
