@@ -51,7 +51,7 @@
     						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
     						<li><strong>Close:</strong> click on the button below to close the modal.</li>
     					</ul>-->
-    					<a href="#" class="button modal url md-close">Meer info <i class="fa fa-arrow-right"></i></a>
+    					<a href="#" target="_blank" class="button modal url md-close">Meer info <i class="fa fa-arrow-right"></i></a>
     				</div>
     			</div>
     		</div>
