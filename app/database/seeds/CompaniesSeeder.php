@@ -15,11 +15,22 @@ class CompaniesSeeder extends Seeder{
         $types = Type::all()->toArray();
 
         foreach($types as $type){
-            $data = file_get_contents("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.378848,4.900568&radius=2500&types=".$type['name']."&sensor=false&key=AIzaSyC1MLIQOrIBfnjyDk78uP2yrDw7dkvm4hU");
-            $object = json_decode($data);
-            $this->command->info('Bedrijven ophalen van het type '.$type['name']);
-            $this->createCompany($object->results);
+            $base_url = $url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=52.378848,4.900568&radius=2500&types=".$type['name']."&sensor=false&key=AIzaSyC1MLIQOrIBfnjyDk78uP2yrDw7dkvm4hU";
+            $this->getCompaniesFromType($type, $base_url, $url);
 
+        }
+    }
+
+    public function getCompaniesFromType($type, $base_url, $url){
+
+        $this->command->info('fetch '.$url);
+        $data = file_get_contents($url);
+        $object = json_decode($data);
+        if( $this->createCompany($object->results) ){
+            if( isset($object->next_page_token ) ){
+                $url =  $base_url.'&pagetoken='.$object->next_page_token;
+                $this->getCompaniesFromType($type, $base_url, $url);
+            }
         }
     }
 
@@ -38,7 +49,7 @@ class CompaniesSeeder extends Seeder{
             $compantObject->save();
 
             // Create company types
-            $this->command->info('Company aan gemaakt '. $result->name);
+//            $this->command->info('Company aan gemaakt '. $result->name);
             foreach($result->types as $aType){
                 $typeObject = Type::whereName($aType)->first();
 
@@ -50,9 +61,11 @@ class CompaniesSeeder extends Seeder{
                 $companyType->type_id = $typeObject->id;
                 $companyType->save();
 
-                $this->command->info('Type  '.$typeObject->name.' gelinked aan'.$result->name);
+//                $this->command->info('Type  '.$typeObject->name.' gelinked aan'.$result->name);
             }
         }
+
+        return true;
     }
 
 } 
