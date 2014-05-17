@@ -19,8 +19,8 @@
     <meta property="og:type" content="website"/>
 
     <!-- stylesheet -->
+    @yield('css')
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
-
     <!--[if lt IE 9]>
     <script src="{{URL::asset('js/plugins/html5shiv.js')}}"></script>
     <![endif]-->
@@ -53,6 +53,7 @@
 <script type="text/javascript" src="{{URL::asset('js/plugins/isotope.pkgd.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/functions.js')}}"></script>
 <script data-main="js/main" src="{{URL::asset('js/plugins/require.js')}}"></script>
+@yield('js')
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

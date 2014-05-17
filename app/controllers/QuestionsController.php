@@ -77,7 +77,6 @@ class QuestionsController extends BaseController {
                 'veterinary_care'
             ]
         ],
-
         [
             'phrase' => 'Do you like to cook?',
             'no' => [
@@ -103,12 +102,17 @@ class QuestionsController extends BaseController {
     ];
 
     public function show(){
-        return View::make("questions");
+        $houses = $this->getResults();
+        return View::make("questions")
+                ->with('houses', $houses);
     }
 
     public function getResults(){
         $filterTypes = Session::get('filter');
 
+        $houses = House::paginate(12);
+
+        return $houses;
     }
 
     public function resetFilter(){

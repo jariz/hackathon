@@ -15,15 +15,15 @@ $( document ).ready(function() {
 	wow.init();
 
 	var $container = $('.container');
-	// init
+//	// init
 	$container.isotope({
 	  // options
 	  itemSelector: 'article',
 	  layoutMode: 'masonry'
 	});
 
-	$(function() {
-	    $("img.lazy").lazyload();
-	});
+
+	$("img.lazy").lazyload();
+
 
 });
