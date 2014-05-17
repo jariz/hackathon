@@ -17,7 +17,7 @@
             Questions.qIndex++;
             var question = Questions.getQuestion();
             $(".question>h1").text(question.phrase);
-            $(".question>h3,.question>h1,.question .answers").fadeIn(500);
+            $(".question>h3,.question>h1,.question .answers").show();
         },
         yes: function () {
             Questions.nextQuestion(function() {
