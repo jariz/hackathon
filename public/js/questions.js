@@ -55,9 +55,9 @@
                 return false;
 
             if(yes && typeof question.answers.yes == "object") {
-                Questions.exclude = $.extend(question.answers.yes, Questions.exclude);
+                Questions.exclude = $.merge(question.answers.yes, Questions.exclude);
             } else if(!yes && typeof question.answers.no == "object") {
-                Questions.exclude = $.extend(question.answers.no, Questions.exclude);
+                Questions.exclude = $.merge(question.answers.no, Questions.exclude);
             }
 
             if(Questions.exclude.length == 0) return;
