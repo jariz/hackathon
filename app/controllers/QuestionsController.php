@@ -110,9 +110,25 @@ class QuestionsController extends BaseController {
     public function getResults(){
         $filterTypes = Session::get('filter');
 
-        $houses = House::paginate(12);
+        $housez = House::paginate(12);
+//        $houses = [];
+//
+//        $types = Type::all();
+//        foreach($housez as $house) {
+//            $house->tags = "";
+//            $house->class = "";
+//            foreach($types as $type) {
+//                $name = $type->name;
+//                if($house->$name != 1) continue;
+//                $house->tags .= $type->display_name.", ";
+//                $house->klass .= " ".$name;
+//            }
+//            if(strlen($house->tags))
+//                $house->tags = substr($house->tags, 0, strlen($house->tags)-2);
+//            $houses[] = $house;
+//        }
 
-        return $houses;
+        return $housez;
     }
 
     public function resetFilter(){

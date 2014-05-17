@@ -44,8 +44,8 @@
 
 					<ul class="tileinfo">
 						<li><i class="fa fa-home"></i> {{$house->adres}}</li>
-						<li><i class="fa fa-tags"></i> Pizza , Clubs</li>
-						<li><i class="fa fa-star"></i> 3/5</li>
+						<li><i class="fa fa-tags"></i> {{$house->tags}}</li>
+						<li><i class="fa fa-dollar"></i> {{number_format($house->price)}}</li>
 					</ul>
 				</div>
 			</article>
@@ -64,21 +64,4 @@
 
 @section('js')
     <script src="{{URL::asset('js/plugins/infinite-scroll/jquery-ias.js')}}"></script>
-    <script type="text/javascript">
-        $(function(){
-        	$.ias({
-        	    container : '.container',
-        	    item: '.item',
-        	    pagination: '.pagination',
-        	    next: '.pagination li:last-child a',
-        	    loader: '<div class="alert alert-info"><i class="fa fa-spinner fa-spin"></i> Meer nieuws aan het laden</div>',
-        	    trigger: 'Meer huizen laden',
-        	    triggerPageThreshold: 20,
-        	    onLoadItems: function(){
-                    $("img.lazy").lazyload();
-        	    }
-        	});
-
-        });
-    </script>
 @stop
