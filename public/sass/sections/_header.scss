@@ -17,10 +17,24 @@
 
    			h1 {
    				font-size: 300%;
+
+   				@media screen and (max-width: 440px) {
+   					font-size: 200%;
+   				}
    			}
 
    			h2 {
    				color: $red;
+   				margin-bottom: 5px;
+
+   				@media screen and (max-width: 440px) {
+   					font-size: 120%;
+   				}
+   			}
+
+   			em {
+   				display: block;
+   				margin-bottom: 20px;
    			}
 
    		}

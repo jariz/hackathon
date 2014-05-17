@@ -1,0 +1,43 @@
+// Section
+
+section {
+	width: 100%;
+	min-height: 100%;
+	background: $black;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 20px;
+	@include box-sizing(border-box);
+}
+
+		.question {
+			width: 100%;
+			height: 300px;
+			background: url(../images/background.jpg);
+			background-size: cover;
+			padding-top: 50px;
+			@include box-sizing(border-box);
+
+			h1 {
+				text-align: center;
+				margin-top: 0;
+			}
+
+			.answers {
+				max-width: 500px;
+				width: 100%;
+				margin: 0 auto;
+				margin-top: 75px;
+				overflow: hidden;
+
+				.button {
+					float: left;
+					margin:0px 20px;
+
+					&:last-of-type {
+						float: right;
+					}
+				}
+			}
+
+		}
