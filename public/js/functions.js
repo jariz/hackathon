@@ -57,4 +57,7 @@
 
 
     });
+
+var polyfilter_scriptpath = '/js/';
+
 })(jQuery);
