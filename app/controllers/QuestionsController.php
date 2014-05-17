@@ -104,9 +104,9 @@ class QuestionsController extends BaseController {
     public function show(){
         $houses = $this->getResults();
         return View::make("questions")
-                ->with('houses', $houses);
-    }
+            ->with('houses', $houses);
 
+    }
     public function getResults(){
         $filterTypes = Session::get('filter');
 
