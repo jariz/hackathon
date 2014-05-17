@@ -9,7 +9,7 @@ article {
 	margin: 1px;
 
 	@media screen and (max-width: 425px) {
-		max-width: 225px;
+		max-width: 240px;
 	}
 
 	img {
@@ -31,7 +31,7 @@ article {
 		@include transition(all 0.25s);
 
 		@media screen and (max-width: 425px) {
-			max-width: 225px;
+			max-width: 240px;
 		}
 
 		h3 {
