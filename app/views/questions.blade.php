@@ -38,13 +38,13 @@
 				</div>
 			</article> -->
             @foreach( $houses as $house)
-			<article class="item">
+			<article class="item{{$meta[$house->id]['class']}}">
 				<img data-original="{{$house->photo}}" class="lazy">
 				<div class="overlay">
 
 					<ul class="tileinfo">
 						<li><i class="fa fa-home"></i> {{$house->adres}}</li>
-						<li><i class="fa fa-tags"></i> {{$house->tags}}</li>
+						<li><i class="fa fa-tags"></i> {{$meta[$house->id]["tags"]}}</li>
 						<li><i class="fa fa-dollar"></i> {{number_format($house->price)}}</li>
 					</ul>
 				</div>
