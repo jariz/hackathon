@@ -17,11 +17,16 @@ section {
 			background-size: cover;
 			padding-top: 50px;
             background-attachment: fixed;
-            background-position-y: -440px;
+            background-position-y: -340px;
 			@include box-sizing(border-box);
 
+			@media screen and (max-width: 425px) {
+				height: 350px;
+				background-position-y: -100px;
+			}
+
 			h1 {
-					text-align: center;
+				text-align: center;
 				margin-top: 0;
               &.compliment {
                 font-size:56px;
@@ -34,6 +39,11 @@ section {
 				margin-top: 35px;
 				display:block;
 				text-align: center;
+
+				@media screen and (max-width: 425px) {
+					font-size: 110%;
+					margin-top: 0;
+				}
 			}
 
 
@@ -48,8 +58,21 @@ section {
 					float: left;
 					margin:0px 20px;
 
+					@media screen and (max-width: 425px) {
+						float: none;
+						display: block;
+						margin-bottom: 15px;
+					}
+
 					&:last-of-type {
 						float: right;
+
+					@media screen and (max-width: 425px) {
+						float: none;
+						display: block;
+						margin-bottom: 15px;
+					}
+
 					}
 				}
 			}
