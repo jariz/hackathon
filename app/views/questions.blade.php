@@ -5,8 +5,8 @@
 			<h1 class="wow fadeInDown" data-wow-delay="1s">Do you read and love books?</h1>
 
 			<div class="wow fadeInUp answers" data-wow-delay="1s">
-				<a href="#" class="button">Yes</a>
-				<a href="#" class="button">No</a>
+				<a href="#" class="button green yes">Yes</a>
+				<a href="#" class="button no">No</a>
 			</div>
 
 			<h3 class="wow fadeInUp" data-wow-delay="1s">3/2500 suitable houses found</h3>
@@ -44,7 +44,9 @@
 
 					<ul class="tileinfo">
 						<li><i class="fa fa-home"></i> {{$house->adres}}</li>
+                        @if(!empty($meta[$house->id]["tags"]))
 						<li><i class="fa fa-tags"></i> {{$meta[$house->id]["tags"]}}</li>
+                        @endif
 						<li><i class="fa fa-dollar"></i> {{number_format($house->price)}}</li>
 					</ul>
 				</div>
@@ -64,4 +66,8 @@
 
 @section('js')
     <script src="{{URL::asset('js/plugins/infinite-scroll/jquery-ias.js')}}"></script>
+    <script>
+        var questions = {{json_encode($questions)}};
+    </script>
+    <script src="{{URL::asset('js/questions.js')}}"></script>
 @stop

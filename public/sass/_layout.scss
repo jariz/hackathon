@@ -8,3 +8,7 @@
 	position: relative;
 	@include box-sizing(border-box);
 }
+
+.pagination {
+    display:none;
+}
