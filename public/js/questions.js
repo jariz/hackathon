@@ -11,11 +11,18 @@
             //bind answers
             $(".question .answers .yes").click(this.yes);
             $(".question .answers .no").click(this.no);
+
         },
         qIndex: 0,
         newQuestion: function() {
             Questions.qIndex++;
             var question = Questions.getQuestion();
+            if( !question){
+                $('.question').animate({
+                   height: 200
+                }, 500);
+                return false;
+            }
             $(".question>h1").text(question.phrase);
             $(".question>h3,.question>h1,.question .answers").show();
         },
@@ -32,10 +39,21 @@
             return false;
         },
         getQuestion: function() {
+            console.log(typeof Questions.theQuestions[Questions.qIndex]);
+            if( typeof Questions.theQuestions[Questions.qIndex] === 'undefined'){
+                $(".question>h1").text("Here are the best matches we have found for you!");
+                $(".question>h3,.question>h1").show();
+                $('.question .answers').hide();
+                return false;
+            }
             return Questions.theQuestions[Questions.qIndex];
         },
         processAnswer: function(yes) {
             var question = Questions.getQuestion();
+
+            if( !question )
+                return false;
+
             if(yes && typeof question.answers.yes == "object") {
                 Questions.exclude = $.extend(Questions.exclude, question.answers.yes);
             } else if(!yes && typeof question.answers.no == "object") {
