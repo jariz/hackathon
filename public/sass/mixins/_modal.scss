@@ -39,6 +39,12 @@ perspective effects (not including the modals and the overlay).
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
+
+	@media screen and (max-width: 425px) {
+		width: 100%;
+		max-width: 300px;
+		min-width: 300px;
+	}
 }
 
 .md-show {
