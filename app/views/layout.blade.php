@@ -11,12 +11,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- Open graph metadata -->
-    <meta property="og:title" content=""/>
+    <meta property="og:title" content="HomeIntres"/>
     <meta property="og:url" content=""/>
     <meta property="og:image" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta property="og:type" content=""/>
+    <meta property="og:site_name" content="HomeIntres"/>
+    <meta property="og:description" content="HomeIntres finds you a house based on your personal interests."/>
+    <meta property="og:type" content="website"/>
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">

@@ -1,4 +1,3 @@
-
   $(window).bind("load", function () {
         $('#loader').fadeOut(100);
     });

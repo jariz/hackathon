@@ -21,6 +21,7 @@ article {
 		left: 0;
 		padding: 20px;
 		@include box-sizing(border-box);
+		@include transition(all 0.25s);
 
 		h3 {
 			margin:0px 0px 10px 0px;
@@ -42,6 +43,11 @@ article {
 				}
 
 			}
+		}
+
+		&:hover,active {
+			background: rgba(232, 83, 79, 1);
+			@include transition(all 0.25s);
 		}
 	}
 }
