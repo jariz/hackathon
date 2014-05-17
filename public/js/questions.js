@@ -60,7 +60,10 @@
                 Questions.exclude = $.merge(question.answers.no, Questions.exclude);
             }
 
-            if(Questions.exclude.length == 0) return;
+            if(Questions.exclude.length == 0) {
+                Questions.newQuestion();
+                return;
+            }
 
             var klass = "";
             var query = "";
