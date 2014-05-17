@@ -125,7 +125,8 @@ class QuestionsController extends BaseController
 
         return View::make("questions")
             ->with('houses', $houses)
-            ->with("meta", $metas);
+            ->with("meta", $metas)
+            ->with("questions", $this->question);
     }
 
     public function getResults()

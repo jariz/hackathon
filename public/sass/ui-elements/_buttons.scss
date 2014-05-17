@@ -22,4 +22,11 @@
 			@include transition(all 0.25s);
 		}
 
+        &.green {
+            border-color: $green;
+            &:hover,active {
+              background: $green;
+          }
+        }
+
 }
