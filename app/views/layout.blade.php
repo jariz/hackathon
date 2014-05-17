@@ -52,7 +52,7 @@
 <script type="text/javascript" src="{{URL::asset('js/plugins/wow.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/plugins/isotope.pkgd.min.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/functions.js')}}"></script>
-<script data-main="js/main" src="{{URL::asset('js/plugins/require.js')}}"></script>
+<script data-main="/js/main" src="{{URL::asset('js/plugins/require.js')}}"></script>
 @yield('js')
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

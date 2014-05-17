@@ -8,6 +8,8 @@
 
 class HouseController extends BaseController{
     public function show($id = null) {
-        return View::make("house");
+        $house = House::findOrFail($id);
+
+        return View::make("house")->with('house', $house);;
     }
 } 

@@ -2,12 +2,15 @@
     $(document).ready(function () {
 
         var container = $('.container');
-        container.isotope({
-            // options
-            itemSelector: 'article',
-            layoutMode: 'masonry'
-        });
 
+        if( typeof container.isotope === 'function' ){
+            container.isotope({
+                // options
+                itemSelector: 'article',
+                layoutMode: 'masonry'
+            });
+        }
+        if( typeof container.infinitescroll === 'function' ){
         container.infinitescroll({
                 navSelector  : '.pagination',
                 nextSelector : '.pagination li:last-child a',
@@ -23,6 +26,7 @@
                 $("img.lazy").lazyload();
             }
         );
+        }
 
 //        $.ias({
 //            container: '.container',

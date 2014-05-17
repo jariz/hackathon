@@ -24,5 +24,10 @@ class House extends Eloquent{
     public $timestamps = false;
     protected $softDelete = false;
 
+    protected $appends = ['money_format'];
 
+    public function getMoneyFormatAttribute(){
+        return number_format($this->attributes['price'], 0, ',', '.');
+
+    }
 } 
