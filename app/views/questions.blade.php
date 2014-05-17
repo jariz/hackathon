@@ -13,30 +13,7 @@
 		</div>
 
 	<section>
-		<div class="container">
-			<!--<article class="wow fadeInUp">
-				<img data-original="http://www.kevinandamanda.com/whatsnew/wp-content/uploads/2012/10/new-house-1.jpg" class="lazy">
-				<div class="overlay">
-					<h3>Streetname</h3>
-					<ul class="tileinfo">
-						<li><i class="fa fa-home"></i> Streetname &plus; number</li>
-						<li><i class="fa fa-tags"></i> Pizza , Clubs</li>
-						<li><i class="fa fa-star"></i> 3/5</li>
-					</ul>
-				</div>
-			</article>
-
-			<article class="wow fadeInUp">
-				<img data-original="http://www.kevinandamanda.com/whatsnew/wp-content/uploads/2012/10/new-house-1.jpg" class="lazy">
-				<div class="overlay">
-					<h3>Streetname</h3>
-					<ul class="tileinfo">
-						<li><i class="fa fa-home"></i> Streetname &plus; number</li>
-						<li><i class="fa fa-tags"></i> Pizza , Clubs</li>
-						<li><i class="fa fa-star"></i> 3/5</li>
-					</ul>
-				</div>
-			</article> -->
+		<div class="container wow slideInUp" data-wow-delay="1s">
             @foreach( $houses as $house)
 			<article data-modal="modal-16" class="md-trigger item{{$meta[$house->id]['class']}}">
 				<img data-original="{{$house->photo}}" class="lazy origin-image">
@@ -65,7 +42,7 @@
     				<h3 class="adres">Wordt replaced met adres</h3>
     				<div>
     				    <img class="house-image" src="#" />
-    					<p class="postal_code">Wordt replaced met postcode</p>
+                        <p><i class="fa fa-home"></i> <span class="postal_code"></span></p>
     					<p><i class="fa fa-dollar"></i> <span class="price">Wordt replaced met prijs</span></p>
     					<p><i class="fa fa-tags"></i> <span class="tags"></span></p>
     					<p>
@@ -74,7 +51,7 @@
     						<li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
     						<li><strong>Close:</strong> click on the button below to close the modal.</li>
     					</ul>-->
-    					<a href="#" class="button green url md-close">Meer info <i class="fa fa-arrow-right"></i></a>
+    					<a href="#" class="button modal url md-close">Meer info <i class="fa fa-arrow-right"></i></a>
     				</div>
     			</div>
     		</div>
