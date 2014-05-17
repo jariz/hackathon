@@ -89,6 +89,10 @@ perspective effects (not including the modals and the overlay).
 	opacity: 0.8;
 	background: rgba(0,0,0,0.1);
 	border-radius: 3px 3px 0 0;
+
+	@media screen and (max-width: 425px) {
+		font-size: 1.3em;
+	} 
 }
 
 .md-content > div {
