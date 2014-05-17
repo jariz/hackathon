@@ -141,7 +141,7 @@ class QuestionsController extends BaseController
 
     public function show()
     {
-        $houses = House::paginate(12);
+        $houses = House::paginate(32);
 
         $types = Type::all();
         $metas = [];

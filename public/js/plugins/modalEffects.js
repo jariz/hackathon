@@ -10,11 +10,15 @@
  */
 var ModalEffects = (function() {
 
-	function init() {
+	window.runModalTriggers = function init() {
 
 		var overlay = document.querySelector( '.md-overlay' );
 
+        var swag = [];
+
 		[].slice.call( document.querySelectorAll( '.md-trigger' ) ).forEach( function( el, i ) {
+            if(swag.indexOf(el) != -1) return;
+            else swag.push(el);
 
 			var modal = document.querySelector( '#' + el.getAttribute( 'data-modal' ) ),
 				close = modal.querySelector( '.md-close' );
@@ -52,6 +56,6 @@ var ModalEffects = (function() {
 
 	}
 
-	init();
+	window.runModalTriggers();
 
 })();
