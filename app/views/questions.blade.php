@@ -2,16 +2,16 @@
 
 @section('content')
 		<div class="question">
-			<h1>Do you read and love books?</h1>
+			<h1 class="wow fadeInDown" data-wow-delay="1s">Do you read and love books?</h1>
 
-			<div class="answers">
+			<div class="wow fadeInUp answers" data-wow-delay="1s">
 				<a href="#" class="button">Yes</a>
 				<a href="#" class="button">No</a>
 			</div>
 		</div>
 
 	<section>
-		<div class="container js-masonry">
+		<div class="container js-masonry wow slideInUp" data-wow-delay="1s">
 			<article>
 				<img src="http://www.kevinandamanda.com/whatsnew/wp-content/uploads/2012/10/new-house-1.jpg">
 				<div class="overlay">
