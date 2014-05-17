@@ -1,3 +1,4 @@
+
 var wow = new WOW(
   {
     boxClass:     'wow',      // animated element css class (default is wow)
@@ -7,3 +8,10 @@ var wow = new WOW(
   }
 );
 wow.init();
+
+var container = document.querySelector('.container');
+var msnry = new Masonry( container, {
+  // options...
+  itemSelector: 'article',
+  columnWidth: 300
+});

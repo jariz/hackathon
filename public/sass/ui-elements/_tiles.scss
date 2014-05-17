@@ -1,0 +1,47 @@
+// Tiles
+
+article {
+	width: 300px;
+	height: 200px;
+	float: left;
+	position: relative;
+	margin: 1px;
+
+	img {
+		width: 300px;
+		height: 200px;
+	}
+
+	.overlay {
+		width: 300px;
+		height: 200px;
+		background: rgba(232, 83, 79, 0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 20px;
+		@include box-sizing(border-box);
+
+		h3 {
+			margin:0px 0px 10px 0px;
+		}
+
+		ul {
+			list-style: none;
+
+			&.tileinfo {
+
+				li {
+					margin-bottom: 10px;
+					color: $white;
+
+					i {
+						margin:2px 10px 0px 0px;
+						}
+
+				}
+
+			}
+		}
+	}
+}

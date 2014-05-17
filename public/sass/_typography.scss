@@ -18,6 +18,18 @@
    	text-transform: uppercase;
    }
 
+   h3 {
+   	font: $h3-font-size $font-title;
+   	color: $white;
+   	text-transform: uppercase;
+   }
+
+   em {
+   	font: $h6-font-size $font-family;
+   	color: $white;
+   	text-transform: uppercase;
+   }
+
    p {
    	width: 100%;
    	font: $font-size $font-family;

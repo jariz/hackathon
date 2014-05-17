@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{$title or "Niggaaa"}}</title>
+    <title>{{$title or "HomeIntres"}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
@@ -38,6 +38,7 @@
 <!-- Requirejs -->
 <script type="text/javascript" src="{{URL::asset('js/libs/jquery.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/plugins/wow.js')}}"></script>
+<script type="text/javascript" src="{{URL::asset('js/plugins/masonry.js')}}"></script>
 <script type="text/javascript" src="{{URL::asset('js/functions.js')}}"></script>
 <script data-main="js/main" src="{{URL::asset('js/plugins/require.js')}}"></script>
 
